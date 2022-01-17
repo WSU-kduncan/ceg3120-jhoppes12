@@ -1,13 +1,13 @@
 # Command line git 
 - status 
- - Shows status of the local repository. This status includes:
+	- Shows status of the local repository. This status includes:
  number of local commits that have not been synced with remote (GitHub)
  list of files in local folder than are NOT being tracked by git
  list of files in local folder that have changes that need to be committed
- - git status 
+	- git status 
 - clone 
- - Used to clone an existing Reository and create a clone of it
- - git clone 
+	- Used to clone an existing Reository and create a clone of it
+	- git clone 
 - add 
  - The add command adds a change or changes in the working directory to the staging area.
  - git add 
