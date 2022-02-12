@@ -1,6 +1,6 @@
 # Part 1 
 
-1. ![Screenshot1](/ceg3120-jhoppes12/Projects/Project2/Images/p2ss1.PNG) 
+1. ![Screenshot1](p2ss1.PNG) 
 	* Creating my vpc with the tag Hoppes-VPC and a 10.0.0.0/24 private range of IPs.	
 
 2. ![Screenshot2](/home/jhoppes/ceg3120-jhoppes12/Projects/Project2/Images/p2ss2.PNG)
