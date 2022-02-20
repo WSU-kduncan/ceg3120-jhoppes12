@@ -28,23 +28,23 @@ Resources:
     Type: 'AWS::EC2::VPC'
     Properties:
       CidrBlock: 10.0.0.0/24
-      Tags: Hoppes-CF-VPC
+      Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
         - Key: Name
-          Value: CEG2350 VPC
+          Value: Hoppes-CF-VPC
   Subnet:
     Type: 'AWS::EC2::Subnet'
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 10.0.0.0/28
-      Tags: Hoppes-CF-VPC
+      Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
   InternetGateway:
     Type: 'AWS::EC2::InternetGateway'
     Properties:
-      Tags: Hoppes-CF-VPC
+      Tags: 
         - Key: Application
           Value: !Ref 'AWS::StackId'
   AttachGateway:
@@ -56,7 +56,7 @@ Resources:
     Type: 'AWS::EC2::RouteTable'
     Properties:
       VpcId: !Ref VPC
-      Tags: Hoppes-CF-VPC
+      Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
   Route:
@@ -116,11 +116,11 @@ Resources:
           - Arch
       InstanceType: t2.micro
       KeyName: !Ref KeyName
-      Tags: Hoppes-CF-instance
+      Tags: 
         - Key: Application
           Value: !Ref 'AWS::StackId'
         - Key: Name
-          Value: CEG2350 Ubuntu
+          Value: Hoppes-CF-instance
       NetworkInterfaces:
         - GroupSet:
             - !Ref Lab1SecurityGroup
@@ -128,7 +128,7 @@ Resources:
           DeviceIndex: '0'
           DeleteOnTermination: 'true'
           SubnetId: !Ref Subnet
-          PrivateIpAddress: 10.0.0.25
+          PrivateIpAddress: 10.0.0.12
       UserData:
         Fn::Base64:
           !Sub |
