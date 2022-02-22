@@ -139,11 +139,11 @@ Resources:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
+            sudo hostnamectl set-hostname Hoppes-CF-instance && \
             apt-get update && \
             apt-get install -y \
               git \
               python3 \
               python3-pip3 && \
-            hostnamectl set-hostname Hoppes-CF-instance && \
             echo "This is from the CF template" > /home/ubuntu/hello.txt && \
             reboot
